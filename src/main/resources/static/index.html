@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sklep Online</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+</head>
+<body>
+
+<div class="header">
+
+    <h1>Sklep Wielobranżowy Damian</h1>
+
+</div>
+
+
+<div class="content">
+
+    <h2>Filtruj produkty ze względu na kategorię:</h2>
+    <a href="/lista">Wszystkie</a> <br>
+    <a href="/lista?kategoria=OTHER">Inne</a> <br>
+    <a href="/lista?kategoria=FOOD">Produkty spożywcze</a> <br>
+    <a href="/lista?kategoria=AGD">Produkty AGD</a>
+
+</div>
+
+<div style="width: 500px; margin: 50px auto">
+
+
+
+    <h2>Dodawanie produktu</h2>
+
+    <form action="/dodaj" method="post">
+
+
+        <div class="form-group">
+            <label for="exampleInputEmail1">Nazwa</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" name="name" placeholder="Nazwa">
+        </div>
+
+        <div class="form-group">
+            <label for="inputState">Kategoria</label>
+            <select id=inputState" class="form-control" name ="category">
+                <option selected disabled>Wybierz...</option>
+                <option value = "AGD">Art. gosp. domowego</option>
+                <option value = "FOOD">Art. spożywcze</option>
+                <option value = "OTHER">Inne</option>
+            </select>
+            <label for="price">Cena</label>
+            <input type="number" class="form-control" id="price" name="price" placeholder="Cena">
+        </div>
+
+        <input type="submit" value="Dodaj" class="btn btn-primary"/>
+
+    </form>
+
+</div>
+
+</body>
+</html>
